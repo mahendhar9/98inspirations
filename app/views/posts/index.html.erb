@@ -1,6 +1,7 @@
 <div class="container">
   <% @posts.each do |post| %>
   <h2><%= link_to post.title, post_path(id: post.id)  %></h2>
+  <%= link_to (image_tag post.image.url(:medium)), post %>
   <% end %>
 
   <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
