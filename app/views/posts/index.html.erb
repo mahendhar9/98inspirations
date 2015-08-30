@@ -1,1 +1,5 @@
-This is FH
+<div class="container">
+  <% @posts.each do |post| %>
+  <h2><%= link_to post.title, post_path(id: post.id)  %></h2>
+  <% end %>
+</div>
