@@ -2,5 +2,7 @@
 <p><%= @post.link %></p>
 <p><%= @post.description %></p>
 
+<p> By <%= @post.user.name %>
+
 <%= link_to 'Edit', edit_post_path(id: @post.id) %>
 <%= link_to 'Destroy', post_path(id: @post.id), method: :delete %>

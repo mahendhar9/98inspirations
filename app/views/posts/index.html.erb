@@ -2,4 +2,6 @@
   <% @posts.each do |post| %>
   <h2><%= link_to post.title, post_path(id: post.id)  %></h2>
   <% end %>
+
+  <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 </div>
