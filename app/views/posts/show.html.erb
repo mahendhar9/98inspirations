@@ -6,6 +6,12 @@
 
 <p> By <%= @post.user.name %>
 
+<p><%= pluralize(@post.get_likes.size, "Like") %></p>
+<p><%= pluralize(@post.get_dislikes.size, "DisLike") %></p>
+
+<%= link_to "Like", like_post_path(@post) %>
+<%= link_to "Dislike", dislike_post_path(@post) %>
+
 <% @comments.each do |comment| %>
   <p><%= comment.content %></p>
 <% end %>

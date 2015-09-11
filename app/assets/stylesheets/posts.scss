@@ -1,3 +1,59 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+}
+
+.navbar-inverse {
+  background-color: #16a085;
+  border-color: #16a085;
+
+  .navbar-nav > li > a {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .navbar-brand {
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  font-size: 30px;
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
+hr {
+  border-top: 1px solid #DCD7D7;
+}
+
+.home-row {
+  margin-top: 81px;
+}
+
+.post-border {
+  margin-bottom: 30px;
+
+  a {
+    color: #777373;
+  }
+
+  h2 {
+    color: #16a085;
+    margin-bottom: 15px;
+  }
+
+  .comment-like-row {
+    margin-top: 15px;
+    
+    .btn-default {
+      border: 2px solid #e74c3c;
+      font-weight: 700;
+      color: #676464;
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
+}
