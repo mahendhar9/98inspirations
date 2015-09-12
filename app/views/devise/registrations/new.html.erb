@@ -1,18 +1,38 @@
-<h2>Sign up</h2>
+ <section class="user-forms">
+  <div class="container">
+    <div class="form-height">
+      <div class="vcenter">
+        <div class="row">
+          <div class="col-md-3">            
+          </div>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+          <div class="col-md-6">
+            <div class="form-border">
+              <h3 class="text-center">Sign Up</h3>
 
-  <div class="form-inputs">
-    <%= f.input :name, required: true, autofocus: true %>
-    <%= f.input :email, required: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
-  </div>
+              <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= f.error_notification %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+              <div class="form-inputs">
+              <%= f.input :name, required: true, autofocus: true, label: false, placeholder: "Name" %>
+                <%= f.input :email, required: true, label: false, placeholder: "Email" %>
+                <%= f.input :password, required: true, label: false, placeholder: "Password (8 characters minumum)" %>
+                <%= f.input :password_confirmation, label: false,required: true, placeholder: "Confirm Password" %>
+              </div>
 
-<%= render "devise/shared/links" %>
+              <div class="form-actions">
+                <%= f.button :submit, "Create Account", data: {disable_with: "Signing you up..."}, class: "btn btn-success signup-btn" %>
+                <br><br>
+                Already a User? 
+              </div>
+              <%= render "devise/shared/links" %>
+              <% end %>
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

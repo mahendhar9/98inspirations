@@ -1,6 +1,7 @@
 body {
   font-family: 'PT Sans', sans-serif;
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 .navbar-inverse {
@@ -14,7 +15,7 @@ body {
 
   .navbar-brand {
   font-family: 'Pacifico', cursive;
-  color: #fff;
+  color: #fbfb0a;
   font-size: 30px;
   }
 }
@@ -25,6 +26,15 @@ a {
 
 hr {
   border-top: 1px solid #DCD7D7;
+}
+
+.fa-heart {
+  color: red;
+}
+
+.btn-success {
+  background-color: #16a085;
+  border-color: #16a085;
 }
 
 .home-row {
@@ -86,4 +96,67 @@ hr {
     margin-right: 10px;
 
   }
+}
+
+.user-forms {
+  margin-top: 40px;
+  height: 100vh;
+  width: 100%;
+  background-color: #ecf0f3;
+  /*background-image: image-url('swirl_pattern.png');*/
+  
+  .form-height {
+    height:100vh;
+  }
+  
+  .vcenter {
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
+   border: 1px solid transparent;
+   
+   .form-border {
+     background-color: #fff;
+     border: 1px solid #ccc;
+     padding: 22px 0px 40px 0px;
+   }
+   
+   h3 {
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  form {
+   width:61%;
+   margin:0 auto;
+   text-align: center;
+   
+   .forgot-password-btn, .update-user {
+    width: 100%;
+  }
+
+  .signup-btn {
+    margin-top: 9px;
+    width: 100%;
+  }
+  
+  .input-group {
+   margin-bottom:15px;
+ }
+}
+
+}
+
+.recover-password {
+  color: #c0392b;
+}
+
+.signup-link{
+  color: #2980b9;
+}
+}
+
+.footer {
+  margin-top: 10px;
+  margin-bottom: 20px;
 }

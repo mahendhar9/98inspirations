@@ -1,15 +1,35 @@
-<h2>Log in</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+<section class="user-forms">
+  <div class="container">
+    <div class="form-height">
+      <div class="vcenter">
+        <div class="row">
+          <div class="col-md-3">            
+          </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+          <div class="col-md-6">
+            <div class="form-border">
+              <h3 class="text-center">Login</h3>
 
-<%= render "devise/shared/links" %>
+              <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div class="form-inputs">
+                <%= f.input :email, required: false, autofocus: true, placeholder: "Email", label: false %>
+                <%= f.input :password, required: false, placeholder: "Password", label: false%>
+                <%# f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+              </div>
+
+              <div class="form-actions">
+                <%= f.button :submit, "Login",data: {disable_with: "Logging you in..."}, class: "btn btn-success signup-btn" %>
+
+                <br><br>
+                Not a User?
+                <%= render "devise/shared/links" %><br>
+                <%= link_to "Recover Password", new_password_path(resource_name), class:"recover-password" %>
+              </div>
+              <% end %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

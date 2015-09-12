@@ -27,6 +27,7 @@ gem 'devise'
 gem 'simple_form'
 gem "paperclip", "~> 4.3"
 gem 'acts_as_votable', '~> 0.10.0'
+gem "font-awesome-rails"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
