@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
 
   before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 
